@@ -11,17 +11,24 @@
 /* Toggle Styles */
 #textEditor{
     background-color: yellow;
-    width: 50%;
-    left: 48%;
     height: 90vh;
-    position: absolute;
+    /*width: 50%;
+    left: 48%;
+    
+    position: absolute;*/
+}
+
+#generateButtonArea{
+    background-color:green;
+    height: 90vh;
 }
 
 #optionsByType{
     background-color: blue;
-    width: 33%;
     height: 90vh;
-    position: absolute;
+    /*width: 33%;
+    
+    position: absolute;*/
 }
 
 #wrapper {
