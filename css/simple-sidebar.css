@@ -9,6 +9,20 @@
  }
 
 /* Toggle Styles */
+#textEditor{
+    background-color: yellow;
+    width: 50%;
+    left: 48%;
+    height: 90vh;
+    position: absolute;
+}
+
+#optionsByType{
+    background-color: blue;
+    width: 33%;
+    height: 90vh;
+    position: absolute;
+}
 
 #wrapper {
     padding-left: 0;
@@ -45,6 +59,8 @@
     width: 100%;
     position: absolute;
     padding: 15px;
+    height: 100%;
+    position: absolute;
 }
 
 #wrapper.toggled #page-content-wrapper {
