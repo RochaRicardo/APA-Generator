@@ -11,6 +11,11 @@
 
     <title>APA-Generator</title>
 
+
+
+    <!-- Include Quill stylesheet -->
+    <link href="vendor/quill/quill.snow.css" rel="stylesheet">
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,6 +28,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Include the Quill library -->
+    <script src="vendor/quill/quill.js"></script>
 
 </head>
 
@@ -38,14 +46,14 @@
                         APA-Generator
                     </a>
                 </li>
-                <li>
+                <li id="bookOpt">
                     <a href="#">Book</a>
                 </li>
-                <li>
+                <li id="magazineOpt">
                     <a href="#">Magazine</a>
                 </li>
 
-                <li>
+                <li id="aboutOpt">
                     <a href="#">About</a>
                 </li>
             </ul>
@@ -60,11 +68,22 @@
 
                     </div>
                     <div class="col-lg-2" id="generateButtonArea">
-
+                        <div id="buttonToGenerate">Generate</div>
                     </div>
                     <div class="col-lg-6" id="textEditor">
-
+                        <div id="editor">
+                            <p>Hello World!</p>
+                        </div>
+                        <script>
+                            var editor = new Quill('#editor', {
+                                modules: { toolbar: '#toolbar' },
+                                theme: 'snow'
+                            });
+                        </script>
                     </div>
+                </div>
+                <div class="row" id ="disclaimer">
+                    This app is made only to help and gives no waranty that is absolutely correct!
                 </div>
             </div>
         </div>
@@ -72,6 +91,12 @@
 
     </div>
     <!-- /#wrapper -->
+
+    <!-- Core status of the app -->
+    <script src="js/appCore.js"></script>
+    
+    <!-- Deals with events from the user -->
+    <script src="js/eventHandler.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

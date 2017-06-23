@@ -22,6 +22,10 @@
     background-color:green;
     height: 90vh;
 }
+#buttonToGenerate{
+    background-color: white;
+    margin-top: 50%;
+}
 
 #optionsByType{
     background-color: blue;
@@ -101,6 +105,9 @@
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
+}
+.sidebar-nav .clicked{
+    background: white; 
 }
 
 .sidebar-nav li a:active,
