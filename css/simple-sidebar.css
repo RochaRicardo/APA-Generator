@@ -30,9 +30,9 @@
 #optionsByType{
     background-color: blue;
     height: 90vh;
-    /*width: 33%;
-    
-    position: absolute;*/
+}
+#disclaimer{
+    text-align: center;
 }
 
 #wrapper {
