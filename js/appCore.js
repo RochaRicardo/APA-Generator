@@ -1,4 +1,5 @@
-var localToAppend = name1
+var localToAppend = name1;
+var NumberAuthors=0;
 function myFunction(){
     var x = document.createElement("INPUT"); //texbox
     var button = document.createElement("button");
@@ -41,6 +42,8 @@ function myFunction(){
     button.setAttribute("onclick", "deleteField(this)");
     
     // Append row to #option div
+    NumberAuthors++;
+    row.setAttribute("id",NumberAuthors);
     document.getElementById("name1").appendChild(row);
     col2.appendChild(label);
     col2.appendChild(x);
