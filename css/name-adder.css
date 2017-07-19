@@ -1,0 +1,28 @@
+.labelStyle{
+  display:block;
+}
+
+.button {
+ /* background: transparent;*/
+  background: #ECE9E6;
+  background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF);
+  background: linear-gradient(to left, #ECE9E6 , #FFFFFF);  
+  padding: 10px;
+  border: 0;
+  border-radius: 25px;
+  font-size:1.2em;
+  outline:none;
+}
+
+.glyphicon{
+  text-shadow: -1px 1px 4px rgba(0,0,0,0.4);
+}
+
+span {
+  vertical-align: middle;
+}
+
+.delete-this{
+    padding: 10px;
+    border: 1px solid;
+}

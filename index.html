@@ -22,6 +22,12 @@
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
 
+    <!-- Name Adder CSS -->
+    <link href="css/name-adder.css" rel="stylesheet">
+
+    <!-- Core CSS -->
+    <link href="css/core.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -64,10 +70,12 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4" id="optionsByType">
+                    <div class="col-lg-5" id="optionsByType">
+                        <button type="button" class="button plusSign" onclick="myFunction()"><span class="glyphicon glyphicon-plus"></span> <span>New Name</span></button>
 
+                        <div id="name1"></div>
                     </div>
-                    <div class="col-lg-2" id="generateButtonArea">
+                    <div class="col-lg-1" id="generateButtonArea">
                         <div id="buttonToGenerate">Generate</div>
                     </div>
                     <div class="col-lg-6" id="textEditor">

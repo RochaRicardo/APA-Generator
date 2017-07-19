@@ -3,38 +3,6 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
- body {
-    overflow-x: hidden;
- }
-
-/* Toggle Styles */
-#textEditor{
-    background-color: yellow;
-    height: 90vh;
-    /*width: 50%;
-    left: 48%;
-    
-    position: absolute;*/
-}
-
-#generateButtonArea{
-    background-color:green;
-    height: 90vh;
-}
-#buttonToGenerate{
-    background-color: white;
-    margin-top: 50%;
-}
-
-#optionsByType{
-    background-color: blue;
-    height: 90vh;
-}
-#disclaimer{
-    text-align: center;
-}
-
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;

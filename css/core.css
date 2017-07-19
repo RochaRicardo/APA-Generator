@@ -1,0 +1,54 @@
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+#textEditor{
+    background-color: yellow;
+    height: 90vh;
+    /*width: 50%;
+    left: 48%;
+    
+    position: absolute;*/
+}
+
+#generateButtonArea{
+    background-color:green;
+    height: 90vh;
+}
+#buttonToGenerate{
+    background-color: white;
+    margin-top: 50%;
+}
+
+#optionsByType{
+    background-color:#FAFAFA;
+    height: 90vh;
+    overflow-y: scroll;
+}
+#disclaimer{
+    text-align: center;
+}
+
+.plusSign {
+  display: block;
+  text-indent: -9999px;
+  width: 23px;
+  height: 23px;
+  background: url(../img/add.svg);
+  background-size: 23px 23px;
+}
+.removeSign {
+  display: block;
+  text-indent: -9999px;
+  width: 23px;
+  height: 23px;
+  background: url(../img/remove.svg);
+  background-size: 23px 23px;
+}
+
+#removeButton{
+    margin: 0;
+    padding:0;
+}
