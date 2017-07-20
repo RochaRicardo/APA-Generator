@@ -76,4 +76,29 @@ function deleteField(e)
 
 myFunction();
 
+function drawInputBox(labelText, placeholderText, classSize){
+  
+  //creation of the HTML elements
+  var container = document.createElement("div");
+  var label = document.createElement("label");
+  var input = document.createElement("input");
+
+  //set the given attributes
+  container.setAttribute("class", "form-group has-feedback");
+  label.setAttribute("class", "labelStyle");
+  label.setAttribute("for","insert");
+  label.innerHTML = labelText;
+  input.setAttribute("name", "insert");
+  input.setAttribute("class", "form-control");
+  if(placeholderText)
+    input.setAttribute("placeholder",placeholderText);
+  input.setAttribute("type","text");
+
+  //mount the container and return it;
+  container.appendChild(label);
+  container.appendChild(input);
+
+  return container;
+
+}
 
