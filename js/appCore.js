@@ -76,7 +76,28 @@ function deleteField(e)
 
 myFunction();
 
-function drawInputBox(labelText, placeholderText, classSize){
+//add title input box
+var title = drawInputBox("Title", "title",null,"col-xs-12")
+document.getElementById("optionsByType").appendChild(title);
+
+//add year input box
+var year = drawInputBox("Year", "year",null,"col-xs-3")
+document.getElementById("optionsByType").appendChild(year);
+
+//add publishier input box
+var publishier = drawInputBox("Publishier", "publishier",null,"col-xs-5")
+document.getElementById("optionsByType").appendChild(publishier);
+
+//add location input box
+var locationElm = drawInputBox("Location", "location",null,"col-xs-4")
+document.getElementById("optionsByType").appendChild(locationElm);
+
+/*add edition number input box
+var year = drawInputBox("Year", "year",null,"col-xs-6")
+document.getElementById("optionsByType").appendChild(year);
+*/
+
+function drawInputBox(labelText, id, placeholderText, classSize){
   
   //creation of the HTML elements
   var container = document.createElement("div");
@@ -85,11 +106,14 @@ function drawInputBox(labelText, placeholderText, classSize){
 
   //set the given attributes
   container.setAttribute("class", "form-group has-feedback");
+  if(classSize)
+    container.classList.add(classSize);
   label.setAttribute("class", "labelStyle");
   label.setAttribute("for","insert");
   label.innerHTML = labelText;
   input.setAttribute("name", "insert");
   input.setAttribute("class", "form-control");
+  input.setAttribute("id", id);
   if(placeholderText)
     input.setAttribute("placeholder",placeholderText);
   input.setAttribute("type","text");
