@@ -1,5 +1,5 @@
 var localToAppend = name1;
-var NumberAuthors=0;
+Window.NumberAuthors=0;
 function myFunction(){
     var x = document.createElement("INPUT"); //texbox
     var button = document.createElement("button");
@@ -42,8 +42,8 @@ function myFunction(){
     button.setAttribute("onclick", "deleteField(this)");
     
     // Append row to #option div
-    NumberAuthors++;
-    row.setAttribute("id",NumberAuthors);
+    Window.NumberAuthors++;
+    row.setAttribute("id","authorName" + Window.NumberAuthors);
     document.getElementById("name1").appendChild(row);
     col2.appendChild(label);
     col2.appendChild(x);
@@ -71,6 +71,7 @@ function myFunction(){
 
 function deleteField(e)
 {
+  Window.NumberAuthors--;
  e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
 }
 
