@@ -1,14 +1,29 @@
-Window.a = function transformNames(){
+function transformNames(){
     var nNames = Window.NumberAuthors;
-
+    var namesReady = [];
     for(var i=1; i<=Window.NumberAuthors; i++){
         var area = document.getElementById("authorName"+i);
         var firstNames = getFirstNames(area);
         var lastName = getLastName(area);
         var nameStyled = styleName(firstNames, lastName);
-        console.log(nameStyled);
-
+        namesReady[i-1] = nameStyled;
     }
+
+    var namesPart ="";
+    var j=0;
+    for(j; j< namesReady.length -1; j++){
+        namesPart += namesReady[j]+"& "
+    }
+    // if the number of author is bigger than 7
+    if(namesReady.length > 7){
+        namesPart +"... "+ namesReady[namesReady.length];
+    }
+    else{
+        // the last names doest have & 
+        namesPart += namesReady[j];
+    }
+    Window.aux = namesPart;
+    return namesPart;
 }
 
 //get the first Name according the HTML structure
@@ -31,4 +46,12 @@ function styleName(firstNames, lastName){
         res += firstNamesContent[i][0].toUpperCase() + ". ";
     }
     return res;
+}
+
+document.getElementById("buttonToGenerate").addEventListener("click", function(){
+    generateAPA();
+});
+
+function generateAPA(){
+    document.getElementsByClassName("ql-editor")[0].innerHTML = transformNames();
 }

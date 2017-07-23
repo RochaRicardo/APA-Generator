@@ -5,7 +5,7 @@
 
 /* Toggle Styles */
 #textEditor{
-    background-color: yellow;
+    background-color: white;
     height: 90vh;
     /*width: 50%;
     left: 48%;
@@ -14,7 +14,7 @@
 }
 
 #generateButtonArea{
-    background-color:green;
+    background-color:grey;
     height: 90vh;
 }
 #buttonToGenerate{
