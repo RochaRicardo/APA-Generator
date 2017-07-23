@@ -36,6 +36,26 @@ function getLastName (element){
     return element.childNodes[2].childNodes[2].value;
 }
 
+//get the title
+function getTitle(){
+    return '<i>' + document.getElementById("title").value+ '</i>';
+}
+
+//get the year
+function getYear(){
+    return document.getElementById("year").value;
+}
+
+//get the publishier
+function getPublishier(){
+    return document.getElementById("publishier").value;
+}
+
+//get the location
+function getLocation(){
+    return document.getElementById("location").value;
+}
+
 //style the names according APA rules
 function styleName(firstNames, lastName){
     //separate all the first names by empty space
@@ -53,5 +73,14 @@ document.getElementById("buttonToGenerate").addEventListener("click", function()
 });
 
 function generateAPA(){
-    document.getElementsByClassName("ql-editor")[0].innerHTML = transformNames();
+    var names = transformNames();
+    var year = getYear();
+    var title = getTitle();
+    var publishier = getPublishier();
+    var location = getLocation();
+
+    var entry = names + "("+year+"). " + title +". " + location +": " +publishier;
+    var p = document.createElement("p");
+    p.innerHTML = entry;
+    document.getElementsByClassName("ql-editor")[0].appendChild(p);
 }
